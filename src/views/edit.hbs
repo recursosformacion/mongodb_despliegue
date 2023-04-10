@@ -1,0 +1,25 @@
+<form action="/grupos/put" method="POST">
+  <input type="hidden" value="{{salida._id}}" name="_id" id="_id" />
+
+  <div>
+    <label for="grupName">Nombre grupo</label>
+    <input
+      type="text"
+      name="grupName"
+      id="grupName"
+      value="{{salida.grupName}}"
+    />
+  </div>
+  <div>
+    <label for="grupDescription">Descripcion</label>
+    <input
+      type="text"
+      name="grupDescription"
+      id="grupDescription"
+      value="{{salida.grupDescription}}"
+    />
+  </div>
+  <div>
+    <button>Enviar</button>
+  </div>
+</form>

@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-5">
+
+      <form action="/grupos" method="POST">
+        <div>
+          <label for="idLocal">Id</label>
+          <input type="number" name="idlocal" id="idlocal" class="form-control"/>
+        </div>
+        <div>
+          <label for="grupName">Nombre grupo</label>
+          <input type="text" name="grupName" id="grupName" class="form-control" />
+        </div>
+        <div>
+          <label for="grupDescription">Descripcion</label>
+          <input type="text" name="grupDescription" id="grupDescription" class="form-control"/>
+        </div>
+        <div>
+          <button>Enviar</button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+  <hr />
+  <div class="col-md-7">
+    <table>
+      <tr>
+        <th>id</th>
+        <th>nombre</th>
+        <th>Descripcion</th>
+        <th></th>
+      </tr>
+      {{#each salida}}
+        <tr>
+          <td>{{index}}</td>
+          <td>{{grupName}}</td>
+          <td>{{grupDescription}}</td>
+          <td>
+            <a href="/grupos/edit/{{_id}}" class="btn btn-success">Actualizar</a>
+            <a href="/grupos/delete/{{_id}}"  class="btn btn-success">Borrar</a>
+          </td>
+        </tr>
+      {{/each}}
+    </table>
+  </div>
+</div>
